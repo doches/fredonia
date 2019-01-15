@@ -1,0 +1,111 @@
+@import "../../variables.less";
+
+.fr-button {
+  padding: @grid-size @grid-size * 1.5;
+  border-radius: @border-radius;
+  background-color: @theme-primary;
+  color: @white;
+  cursor: pointer;
+  font-family: @text-family;
+  font-weight: @font-weight-bold;
+  font-size: @font-size-normal;
+  border: none;
+  margin: @grid-size / 4;
+  text-transform: uppercase;
+  transition: all 120ms ease-out;
+  position: relative;
+  top: 0px;
+  box-shadow: 2px 2px 2px fadeout(@black, 80%);
+}
+
+.fr-button.fr-small {
+  padding: @grid-size / 2 @grid-size;
+  font-size: @font-size-small;
+}
+
+.fr-button:hover {
+  background-color: lighten(@theme-primary, 5%);
+  top: 1px;
+  box-shadow: 1px 1px 0 fadeout(@black, 80%);
+}
+
+.fr-button.fr-minimal {
+  box-shadow: none;
+  background-color: transparent;
+  color: @theme-primary;
+  text-shadow: 1px 1px 1px fadeout(@black, 80%);
+}
+
+.fr-button.fr-minimal.fr-small {
+  text-shadow: 1px 1px 0 fadeout(@black, 80%);
+}
+
+.fr-button.fr-minimal:hover {
+  background-color: @theme-primary;
+  color: @white;
+  top: 0;
+  box-shadow: none;
+}
+
+.fr-button.fr-intent-warning {
+  background-color: @theme-secondary;
+}
+
+.fr-button.fr-intent-warning:hover {
+  background-color: lighten(@theme-secondary, 10%);
+}
+
+.fr-button.fr-intent-warning.fr-minimal {
+  box-shadow: none;
+  background-color: transparent;
+  color: @theme-secondary;
+}
+
+.fr-button.fr-intent-warning.fr-minimal:hover {
+  background-color: @theme-secondary;
+  color: @white;
+  top: 0;
+  box-shadow: none;
+}
+
+.fr-button.fr-intent-success {
+  background-color: @green4;
+}
+
+.fr-button.fr-intent-success:hover {
+  background-color: lighten(@green4, 10%);
+}
+
+.fr-button.fr-intent-success.fr-minimal {
+  box-shadow: none;
+  background-color: transparent;
+  color: @green4;
+}
+
+.fr-button.fr-intent-success.fr-minimal:hover {
+  background-color: @green4;
+  color: @white;
+  top: 0;
+  box-shadow: none;
+}
+
+.fr-button.fr-intent-danger {
+  background-color: @red3;
+}
+
+.fr-button.fr-intent-danger:hover {
+  background-color: lighten(@red3, 10%);
+}
+
+.fr-button.fr-intent-danger.fr-minimal {
+  box-shadow: none;
+  background-color: transparent;
+  color: @red3;
+}
+
+.fr-button.fr-intent-danger.fr-minimal:hover {
+  background-color: @red3;
+  color: @white;
+  top: 0;
+  box-shadow: none;
+}

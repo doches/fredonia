@@ -1,0 +1,58 @@
+@import "../../variables.less";
+
+.fr-input {
+  padding: @grid-size / 2;
+  background-color: @white;
+  color: @black;
+  font-family: @title-family;
+  border-radius: @border-radius;
+  border: 2px solid @grey8;
+  font-size: @font-size-normal;
+  box-sizing: border-box;
+
+  transition: all 120ms ease-out;
+}
+
+.fr-input:focus {
+  box-shadow: 1px 1px 3px @grey9;
+}
+
+.fr-input::placeholder {
+  color: fadeout(@black, 80%);
+}
+
+.fr-fill {
+  width: 100%;
+}
+
+.fr-input.fr-large {
+  font-size: @font-size-large;
+}
+
+.fr-input.fr-small {
+  font-size: @font-size-small;
+}
+
+.fr-input.fr-intent-warning {
+  border-color: @theme-secondary;
+}
+
+.fr-input.fr-intent-warning::placeholder {
+  color: fadeout(@theme-secondary, 80%);
+}
+
+.fr-input.fr-intent-success {
+  border-color: @green1;
+}
+
+.fr-input.fr-intent-success::placeholder {
+  color: fadeout(@green1, 30%);
+}
+
+.fr-input.fr-intent-danger {
+  border-color: @red1;
+}
+
+.fr-input.fr-intent-danger::placeholder {
+  color: fadeout(@red1, 80%);
+}

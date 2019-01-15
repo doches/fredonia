@@ -1,0 +1,64 @@
+@import "../../variables.less";
+
+.fr-checkbox {
+  display: inline-block;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: @grid-size  / 4;
+
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+
+  input[type=checkbox] + label {
+    position: relative;
+    top: -1px;
+    font-family: @title-family;
+    font-weight: @font-weight-light;
+    cursor: pointer;
+  }
+
+  input[type=checkbox] + label:before {
+    content: " ";
+    border-radius: @border-radius;
+    background: @white;
+    border: 1px solid @grey8;
+    padding: @grid-size / 4;
+    width: @grid-size / 2;
+    height: @grid-size / 2;
+    display: inline-block;
+    flex: 0;
+    position: relative;
+    top: 4px;
+    margin-right: @grid-size / 4;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    background: @theme-secondary;
+  }
+
+  label {
+    flex: 0 0 auto;
+  }
+
+  svg {
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    color: @white;
+    font-size: @font-size-small;
+    z-index: 1;
+    pointer-events: none;
+
+    -webkit-filter: drop-shadow( 0 1px 1px fadeout(@black, 50%) );
+          filter: drop-shadow( 0 1px 1px fadeout(@black, 50%) );
+  }
+}
+
+.fr-checkbox:focus {
+  input[type=checkbox] + label:before {
+    box-shadow: 0 0 1px fadeout(@black, 50%);
+  }
+}
